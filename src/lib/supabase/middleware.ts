@@ -2,6 +2,26 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 /**
+ * 보호된 라우트 목록
+ * 인증이 필요한 경로들
+ */
+const PROTECTED_ROUTES = [
+  '/mypage',
+  '/question',
+  '/space',
+  '/friends',
+  '/onboarding',
+]
+
+/**
+ * 인증된 사용자가 접근하면 안 되는 라우트
+ * 로그인 상태에서 접근 시 메인으로 리다이렉트
+ */
+const AUTH_ROUTES = [
+  '/login',
+]
+
+/**
  * 미들웨어용 Supabase 클라이언트
  * 세션 갱신 및 인증 체크에 사용합니다.
  */
@@ -39,17 +59,31 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser()
 
-  // 보호된 경로 체크 (필요시 주석 해제)
-  // const protectedRoutes = ['/mypage', '/question', '/space']
-  // const isProtectedRoute = protectedRoutes.some(route =>
-  //   request.nextUrl.pathname.startsWith(route)
-  // )
-  //
-  // if (!user && isProtectedRoute) {
-  //   const url = request.nextUrl.clone()
-  //   url.pathname = '/login'
-  //   return NextResponse.redirect(url)
-  // }
+  const pathname = request.nextUrl.pathname
+
+  // 보호된 경로 체크 - 인증되지 않은 사용자는 로그인으로 리다이렉트
+  const isProtectedRoute = PROTECTED_ROUTES.some(route =>
+    pathname.startsWith(route)
+  )
+
+  if (!user && isProtectedRoute) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    // 로그인 후 원래 페이지로 돌아갈 수 있도록 next 파라미터 추가
+    url.searchParams.set('next', pathname)
+    return NextResponse.redirect(url)
+  }
+
+  // 인증 라우트 체크 - 이미 로그인된 사용자는 메인으로 리다이렉트
+  const isAuthRoute = AUTH_ROUTES.some(route =>
+    pathname.startsWith(route)
+  )
+
+  if (user && isAuthRoute) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/'
+    return NextResponse.redirect(url)
+  }
 
   return supabaseResponse
 }

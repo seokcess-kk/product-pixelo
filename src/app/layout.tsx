@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import '@/styles/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,6 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        {/* Kakao SDK - 카카오톡 공유 기능용 */}
+        <Script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.0/kakao.min.js"
+          integrity="sha384-l+xbElFSnPZ2rOaPrU//2FF5B4LB8FiX5q4fXYTlfcG4PGpMkE1vcL7kNXI6Cci0"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
+      </head>
       <body className={inter.className}>
         <main className="min-h-screen">{children}</main>
       </body>

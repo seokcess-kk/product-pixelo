@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* DungGeunMo 픽셀 폰트 */
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('/fonts/DungGeunMo.woff2') format('woff2'),
+       url('/fonts/DungGeunMo.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -10,7 +20,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 228 100% 65%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -22,18 +32,18 @@
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 228 100% 65%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 240 20% 8%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 240 20% 10%;
     --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
+    --popover: 240 20% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 228 100% 70%;
     --primary-foreground: 222.2 47.4% 11.2%;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -45,7 +55,7 @@
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 228 100% 70%;
   }
 }
 
@@ -55,7 +65,154 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* 픽셀 폰트 렌더링 최적화 */
+  .font-pixel {
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: unset;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+@layer components {
+  /* 픽셀 카드 스타일 */
+  .pixel-card {
+    @apply border-4 border-pixel-black bg-pixel-white p-6 shadow-pixel;
+  }
+
+  .pixel-card:active {
+    @apply translate-x-0.5 translate-y-0.5 shadow-pixel-pressed;
+  }
+
+  /* 픽셀 입력 필드 */
+  .pixel-input {
+    @apply border-3 border-pixel-black bg-pixel-white px-4 py-3 font-pixel text-pixel-body;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+  }
+
+  /* 픽셀 배지 */
+  .pixel-badge {
+    @apply inline-flex items-center border-2 border-pixel-black px-2 py-1 font-pixel text-pixel-caption;
+  }
+
+  /* 픽셀 프로그레스 바 */
+  .pixel-progress {
+    @apply h-4 border-2 border-pixel-black bg-gray-200;
+  }
+
+  .pixel-progress-fill {
+    @apply h-full bg-primary-500;
+    transition: width 0.3s steps(10);
+  }
+}
+
+@layer utilities {
+  /* 픽셀 이미지 렌더링 */
+  .pixel-render {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  /* 애니메이션 지연 유틸리티 */
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  /* 스크롤바 스타일 (픽셀 느낌) */
+  .pixel-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .pixel-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+  }
+
+  .pixel-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-500;
+  }
+
+  .pixel-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-600;
+  }
+
+  /* 터치 액션 최적화 */
+  .touch-pan-x {
+    touch-action: pan-x;
+  }
+
+  .touch-pan-y {
+    touch-action: pan-y;
+  }
+}
+
+/* Question page animations */
+@keyframes dot-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(360deg);
+  }
+}
+
+@keyframes thinking-dot {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes pixel-loading {
+  0% { width: 0%; }
+  50% { width: 100%; }
+  100% { width: 0%; }
+}
+
+/* Reduced motion 지원 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* 필수 애니메이션만 유지 */
+  .animate-spin,
+  .animate-pixel-blink {
+    animation-duration: 1s !important;
+    animation-iteration-count: infinite !important;
   }
 }
