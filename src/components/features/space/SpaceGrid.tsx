@@ -4,6 +4,8 @@ import { useRef, useState, useCallback, useMemo } from 'react'
 import { cn } from '@/lib/utils'
 import type { ObjectPlacement, PixeloObject } from '@/types'
 
+const PLACEHOLDER_IMAGE = '/images/placeholder-object.svg'
+
 // =============================================================================
 // Types
 // =============================================================================
@@ -105,6 +107,11 @@ function SpaceObject({
   const { object, x, y, scale, rotation, zIndex } = placedObject
   const width = (object.width ?? 1) * cellSize
   const height = (object.height ?? 1) * cellSize
+  const [imgSrc, setImgSrc] = useState(object.imageUrl || PLACEHOLDER_IMAGE)
+
+  const handleImageError = () => {
+    setImgSrc(PLACEHOLDER_IMAGE)
+  }
 
   return (
     <div
@@ -138,27 +145,15 @@ function SpaceObject({
         }
       }}
     >
-      {/* 플레이스홀더 이미지 또는 실제 이미지 */}
-      {object.imageUrl ? (
-        <img
-          src={object.imageUrl}
-          alt={object.name}
-          className="h-full w-full object-contain"
-          style={{ imageRendering: 'pixelated' }}
-          draggable={false}
-        />
-      ) : (
-        <div
-          className={cn(
-            'flex h-full w-full items-center justify-center rounded-sm',
-            'bg-gradient-to-br from-primary/20 to-primary/40',
-            'text-xs font-medium text-primary'
-          )}
-          style={{ imageRendering: 'pixelated' }}
-        >
-          {object.name.slice(0, 2)}
-        </div>
-      )}
+      {/* 오브젝트 이미지 */}
+      <img
+        src={imgSrc}
+        alt={object.name}
+        className="h-full w-full object-contain"
+        style={{ imageRendering: 'pixelated' }}
+        draggable={false}
+        onError={handleImageError}
+      />
 
       {/* 편집 모드에서 선택된 오브젝트 표시 */}
       {isEditMode && isSelected && (

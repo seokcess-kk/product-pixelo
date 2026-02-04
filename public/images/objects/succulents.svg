@@ -1,0 +1,33 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 다육이 세트: 안정 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 트레이 -->
+  <rect x="5" y="70" width="90" height="25" rx="3" fill="#8b4513"/>
+  <rect x="8" y="73" width="84" height="19" rx="2" fill="#a0522d"/>
+  <!-- 화분 1 (왼쪽) -->
+  <rect x="12" y="55" width="22" height="20" rx="2" fill="#d4a574"/>
+  <ellipse cx="23" cy="58" rx="10" ry="3" fill="#5c4033"/>
+  <!-- 다육이 1 -->
+  <ellipse cx="23" cy="50" rx="8" ry="5" fill="#27ae60"/>
+  <ellipse cx="18" cy="48" rx="5" ry="3" fill="#2ecc71"/>
+  <ellipse cx="28" cy="48" rx="5" ry="3" fill="#2ecc71"/>
+  <ellipse cx="23" cy="44" rx="4" ry="3" fill="#58d68d"/>
+  <!-- 화분 2 (중앙) -->
+  <circle cx="50" cy="62" r="12" fill="#e67e22"/>
+  <ellipse cx="50" cy="55" rx="10" ry="4" fill="#5c4033"/>
+  <!-- 다육이 2 (로제트 형) -->
+  <circle cx="50" cy="48" r="5" fill="#1abc9c"/>
+  <ellipse cx="45" cy="45" rx="4" ry="6" fill="#16a085" transform="rotate(-30 45 45)"/>
+  <ellipse cx="55" cy="45" rx="4" ry="6" fill="#16a085" transform="rotate(30 55 45)"/>
+  <ellipse cx="43" cy="52" rx="4" ry="6" fill="#16a085" transform="rotate(-60 43 52)"/>
+  <ellipse cx="57" cy="52" rx="4" ry="6" fill="#16a085" transform="rotate(60 57 52)"/>
+  <ellipse cx="50" cy="40" rx="3" ry="5" fill="#1abc9c"/>
+  <!-- 화분 3 (오른쪽) -->
+  <polygon points="68,75 72,55 88,55 92,75" fill="#cd853f"/>
+  <ellipse cx="80" cy="58" rx="9" ry="3" fill="#5c4033"/>
+  <!-- 다육이 3 -->
+  <rect x="77" y="40" width="6" height="18" fill="#27ae60"/>
+  <ellipse cx="80" cy="40" rx="5" ry="3" fill="#2ecc71"/>
+  <rect x="72" y="48" width="5" height="10" fill="#27ae60" transform="rotate(-20 74 53)"/>
+  <rect x="83" y="48" width="5" height="10" fill="#27ae60" transform="rotate(20 86 53)"/>
+</svg>

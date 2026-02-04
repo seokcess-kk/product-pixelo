@@ -1,0 +1,36 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Day 1 웰컴 인형: 특별 보상 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 몸통 -->
+  <ellipse cx="50" cy="65" rx="25" ry="28" fill="#f5deb3"/>
+  <ellipse cx="50" cy="65" rx="22" ry="25" fill="#ffe4c4"/>
+  <!-- 머리 -->
+  <circle cx="50" cy="32" r="25" fill="#f5deb3"/>
+  <circle cx="50" cy="32" r="22" fill="#ffe4c4"/>
+  <!-- 귀 -->
+  <circle cx="30" cy="18" r="10" fill="#f5deb3"/>
+  <circle cx="30" cy="18" r="7" fill="#ffb6c1"/>
+  <circle cx="70" cy="18" r="10" fill="#f5deb3"/>
+  <circle cx="70" cy="18" r="7" fill="#ffb6c1"/>
+  <!-- 눈 -->
+  <circle cx="40" cy="30" r="5" fill="#2c3e50"/>
+  <circle cx="60" cy="30" r="5" fill="#2c3e50"/>
+  <circle cx="42" cy="28" r="2" fill="#fff"/>
+  <circle cx="62" cy="28" r="2" fill="#fff"/>
+  <!-- 코 -->
+  <ellipse cx="50" cy="38" rx="4" ry="3" fill="#d35400"/>
+  <!-- 입 -->
+  <path d="M42 44 Q50 50 58 44" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  <!-- 팔 -->
+  <ellipse cx="25" cy="60" rx="8" ry="12" fill="#f5deb3"/>
+  <ellipse cx="75" cy="60" rx="8" ry="12" fill="#f5deb3"/>
+  <!-- 다리 -->
+  <ellipse cx="38" cy="88" rx="10" ry="8" fill="#f5deb3"/>
+  <ellipse cx="62" cy="88" rx="10" ry="8" fill="#f5deb3"/>
+  <!-- 하트 들고 있음 -->
+  <path d="M50 72 C50 68 45 68 45 72 C45 68 40 68 40 72 C40 78 45 82 45 82 C45 82 50 78 50 72" fill="#e74c3c" transform="translate(5,0)"/>
+  <!-- 리본 -->
+  <rect x="45" y="53" width="10" height="6" fill="#e74c3c"/>
+  <polygon points="40,56 45,53 45,59" fill="#c0392b"/>
+  <polygon points="60,56 55,53 55,59" fill="#c0392b"/>
+</svg>

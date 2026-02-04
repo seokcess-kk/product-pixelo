@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import type { AcquiredObject } from '@/types/questions'
 
+const PLACEHOLDER_IMAGE = '/images/placeholder-object.svg'
+
 interface AnswerFeedbackProps {
   isVisible: boolean
   axisChange?: {
@@ -130,6 +132,12 @@ interface ObjectAcquisitionModalProps {
 }
 
 function ObjectAcquisitionModal({ object }: ObjectAcquisitionModalProps) {
+  const [imgSrc, setImgSrc] = useState(object.imageUrl || PLACEHOLDER_IMAGE)
+
+  const handleImageError = () => {
+    setImgSrc(PLACEHOLDER_IMAGE)
+  }
+
   return (
     <div className="animate-scale-in pointer-events-auto">
       <div className="relative bg-pixel-white border-4 border-pixel-black shadow-pixel p-8 text-center max-w-sm mx-4">
@@ -142,15 +150,12 @@ function ObjectAcquisitionModal({ object }: ObjectAcquisitionModalProps) {
 
         {/* Object Image */}
         <div className="w-32 h-32 mx-auto mb-4 bg-gray-100 border-4 border-pixel-black flex items-center justify-center overflow-hidden">
-          {object.imageUrl ? (
-            <img
-              src={object.imageUrl}
-              alt={object.name}
-              className="w-full h-full object-contain pixel-render"
-            />
-          ) : (
-            <div className="w-16 h-16 bg-primary-200 animate-float" />
-          )}
+          <img
+            src={imgSrc}
+            alt={object.name}
+            className="w-full h-full object-contain pixel-render"
+            onError={handleImageError}
+          />
         </div>
 
         {/* Object Name */}

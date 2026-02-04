@@ -1,0 +1,20 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 감성 포스터: 감성 스타일, 아트 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 액자 프레임 -->
+  <rect x="10" y="5" width="80" height="90" fill="#2c3e50"/>
+  <rect x="13" y="8" width="74" height="84" fill="#34495e"/>
+  <!-- 포스터 배경 -->
+  <rect x="16" y="11" width="68" height="78" fill="#ffe4e1"/>
+  <!-- 추상 아트 요소 -->
+  <circle cx="40" cy="40" r="20" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="60" cy="55" r="15" fill="#4ecdc4" opacity="0.8"/>
+  <circle cx="35" cy="65" r="12" fill="#ffe66d" opacity="0.8"/>
+  <!-- 라인 아트 -->
+  <path d="M25 75 Q50 50 75 70" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  <path d="M20 30 Q40 60 70 25" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  <!-- 별 장식 -->
+  <polygon points="70,20 72,26 78,26 73,30 75,36 70,32 65,36 67,30 62,26 68,26" fill="#ffd700"/>
+  <!-- 텍스트 느낌 -->
+  <rect x="25" y="80" width="40" height="4" fill="#2c3e50"/>
+</svg>

@@ -1,0 +1,20 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 블루투스 스피커: 외향 스타일, 현대적 디자인 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 스피커 본체 -->
+  <rect x="20" y="25" width="60" height="55" rx="10" fill="#2c3e50"/>
+  <rect x="23" y="28" width="54" height="49" rx="8" fill="#34495e"/>
+  <!-- 스피커 그릴 -->
+  <circle cx="50" cy="52" r="20" fill="#1a252f"/>
+  <circle cx="50" cy="52" r="18" fill="#2c3e50"/>
+  <circle cx="50" cy="52" r="14" fill="#1a252f"/>
+  <circle cx="50" cy="52" r="10" fill="#2c3e50"/>
+  <circle cx="50" cy="52" r="5" fill="#1a252f"/>
+  <!-- LED 표시등 -->
+  <circle cx="35" cy="35" r="3" fill="#3498db"/>
+  <circle cx="50" cy="35" r="3" fill="#3498db"/>
+  <circle cx="65" cy="35" r="3" fill="#3498db"/>
+  <!-- 음파 표시 -->
+  <path d="M78 45 Q85 52 78 60" stroke="#3498db" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M82 40 Q92 52 82 65" stroke="#3498db" stroke-width="2" fill="none" opacity="0.5"/>
+</svg>

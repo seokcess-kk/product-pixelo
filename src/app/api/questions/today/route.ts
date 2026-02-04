@@ -28,6 +28,7 @@ export async function GET(_request: NextRequest) {
 
     // 1. 현재 사용자 확인
     const { data: { user }, error: authError } = await supabase.auth.getUser()
+    console.log('[questions/today] 1. Auth check:', { userId: user?.id, authError })
     if (authError || !user) {
       throw new UnauthorizedError()
     }
@@ -38,6 +39,7 @@ export async function GET(_request: NextRequest) {
       .select('*')
       .eq('is_active', true)
       .single<SeasonRow>()
+    console.log('[questions/today] 2. Season check:', { activeSeason, seasonError })
 
     if (seasonError || !activeSeason) {
       throw new NotFoundError('활성 시즌')
@@ -51,8 +53,10 @@ export async function GET(_request: NextRequest) {
       .eq('season_id', activeSeason.id)
       .single<UserSeasonRow>()
 
+    console.log('[questions/today] 3. UserSeason check:', { userSeason, userSeasonError })
     if (userSeasonError && userSeasonError.code === 'PGRST116') {
       // 참여 정보가 없으면 새로 생성
+      console.log('[questions/today] 3a. Creating new user_season...')
       const { data: newUserSeason, error: insertError } = await supabase
         .from('user_seasons')
         .insert({
@@ -63,12 +67,13 @@ export async function GET(_request: NextRequest) {
         .select()
         .single<UserSeasonRow>()
 
+      console.log('[questions/today] 3b. Insert result:', { newUserSeason, insertError })
       if (insertError) {
-        throw new Error('시즌 참여 정보 생성에 실패했습니다.')
+        throw new Error(`시즌 참여 정보 생성에 실패했습니다: ${insertError.message}`)
       }
       userSeason = newUserSeason
     } else if (userSeasonError) {
-      throw new Error('시즌 참여 정보 조회에 실패했습니다.')
+      throw new Error(`시즌 참여 정보 조회에 실패했습니다: ${userSeasonError.message}`)
     }
 
     // 시즌이 이미 완료된 경우
@@ -179,6 +184,7 @@ export async function GET(_request: NextRequest) {
 
     return successResponse(response)
   } catch (error) {
+    console.error('[questions/today] ERROR:', error)
     return handleError(error)
   }
 }

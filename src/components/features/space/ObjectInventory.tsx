@@ -6,6 +6,8 @@ import { Button } from '@/components/ui/Button'
 import { Spinner } from '@/components/ui/Spinner'
 import type { InventoryItem, ObjectCategory } from '@/types'
 
+const PLACEHOLDER_IMAGE = '/images/placeholder-object.svg'
+
 // =============================================================================
 // Types
 // =============================================================================
@@ -54,6 +56,13 @@ function InventoryItemCard({
   onPlace,
 }: InventoryItemCardProps) {
   const { object, isPlaced } = item
+  const [imgSrc, setImgSrc] = useState(
+    object.thumbnailUrl || object.imageUrl || PLACEHOLDER_IMAGE
+  )
+
+  const handleImageError = () => {
+    setImgSrc(PLACEHOLDER_IMAGE)
+  }
 
   return (
     <div
@@ -83,22 +92,14 @@ function InventoryItemCard({
     >
       {/* 썸네일 */}
       <div className="relative aspect-square w-full overflow-hidden rounded-md bg-muted">
-        {object.thumbnailUrl || object.imageUrl ? (
-          <img
-            src={object.thumbnailUrl || object.imageUrl}
-            alt={object.name}
-            className="h-full w-full object-contain"
-            style={{ imageRendering: 'pixelated' }}
-            draggable={false}
-          />
-        ) : (
-          <div
-            className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary/20 to-primary/40 text-lg font-bold text-primary"
-            style={{ imageRendering: 'pixelated' }}
-          >
-            {object.name.slice(0, 1)}
-          </div>
-        )}
+        <img
+          src={imgSrc}
+          alt={object.name}
+          className="h-full w-full object-contain"
+          style={{ imageRendering: 'pixelated' }}
+          draggable={false}
+          onError={handleImageError}
+        />
 
         {/* 배치됨 표시 */}
         {isPlaced && (

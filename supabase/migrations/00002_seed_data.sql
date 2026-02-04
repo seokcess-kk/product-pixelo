@@ -443,77 +443,77 @@ from season1 s
 cross join lateral (
   values
     -- 기본 제공 오브젝트 (배경)
-    ('background', '기본 방 배경', '시작할 때 제공되는 기본 방 배경입니다.', '/images/objects/room-bg-default.png', '/images/objects/thumbs/room-bg-default.png', null, null, null, 'default', null, 0, 0, 800, 600, false),
+    ('background', '기본 방 배경', '시작할 때 제공되는 기본 방 배경입니다.', '/images/objects/room-bg-default.svg', '/images/objects/thumbs/room-bg-default.svg', null, null, null, 'default', null, 0, 0, 800, 600, false),
 
     -- 에너지 방향 축 오브젝트 (내향 1-2 / 외향 4-5)
-    ('small_furniture', '아늑한 독서 의자', '혼자만의 시간을 위한 편안한 의자', '/images/objects/reading-chair.png', '/images/objects/thumbs/reading-chair.png', 'energy', 1, 2, 'axis_score', null, 100, 300, 120, 150, true),
-    ('accessory', '무드등', '은은한 조명의 무드등', '/images/objects/mood-lamp.png', '/images/objects/thumbs/mood-lamp.png', 'energy', 1, 2, 'axis_score', null, 50, 100, 60, 80, true),
-    ('plant', '작은 화분', '조용히 함께하는 작은 식물', '/images/objects/small-plant.png', '/images/objects/thumbs/small-plant.png', 'energy', 1, 2, 'axis_score', null, 200, 150, 50, 70, true),
+    ('small_furniture', '아늑한 독서 의자', '혼자만의 시간을 위한 편안한 의자', '/images/objects/reading-chair.svg', '/images/objects/thumbs/reading-chair.svg', 'energy', 1, 2, 'axis_score', null, 100, 300, 120, 150, true),
+    ('accessory', '무드등', '은은한 조명의 무드등', '/images/objects/mood-lamp.svg', '/images/objects/thumbs/mood-lamp.svg', 'energy', 1, 2, 'axis_score', null, 50, 100, 60, 80, true),
+    ('plant', '작은 화분', '조용히 함께하는 작은 식물', '/images/objects/small-plant.svg', '/images/objects/thumbs/small-plant.svg', 'energy', 1, 2, 'axis_score', null, 200, 150, 50, 70, true),
 
-    ('medium_furniture', '파티 테이블', '친구들과 함께하기 좋은 테이블', '/images/objects/party-table.png', '/images/objects/thumbs/party-table.png', 'energy', 4, 5, 'axis_score', null, 300, 350, 200, 120, true),
-    ('lighting', '화려한 조명', '파티 분위기의 밝은 조명', '/images/objects/bright-light.png', '/images/objects/thumbs/bright-light.png', 'energy', 4, 5, 'axis_score', null, 400, 50, 100, 100, true),
-    ('accessory', '블루투스 스피커', '신나는 음악을 위한 스피커', '/images/objects/speaker.png', '/images/objects/thumbs/speaker.png', 'energy', 4, 5, 'axis_score', null, 500, 200, 80, 100, true),
+    ('medium_furniture', '파티 테이블', '친구들과 함께하기 좋은 테이블', '/images/objects/party-table.svg', '/images/objects/thumbs/party-table.svg', 'energy', 4, 5, 'axis_score', null, 300, 350, 200, 120, true),
+    ('lighting', '화려한 조명', '파티 분위기의 밝은 조명', '/images/objects/bright-light.svg', '/images/objects/thumbs/bright-light.svg', 'energy', 4, 5, 'axis_score', null, 400, 50, 100, 100, true),
+    ('accessory', '블루투스 스피커', '신나는 음악을 위한 스피커', '/images/objects/speaker.svg', '/images/objects/thumbs/speaker.svg', 'energy', 4, 5, 'axis_score', null, 500, 200, 80, 100, true),
 
     -- 생활 패턴 축 오브젝트 (루틴 1-2 / 즉흥 4-5)
-    ('wall_deco', '달력', '계획을 위한 큰 달력', '/images/objects/calendar.png', '/images/objects/thumbs/calendar.png', 'lifestyle', 1, 2, 'axis_score', null, 600, 50, 120, 150, true),
-    ('accessory', '알람 시계', '규칙적인 일상을 위한 시계', '/images/objects/alarm-clock.png', '/images/objects/thumbs/alarm-clock.png', 'lifestyle', 1, 2, 'axis_score', null, 250, 80, 60, 60, true),
-    ('small_furniture', '정리함', '깔끔하게 정리된 수납함', '/images/objects/organizer.png', '/images/objects/thumbs/organizer.png', 'lifestyle', 1, 2, 'axis_score', null, 150, 250, 100, 120, true),
+    ('wall_deco', '달력', '계획을 위한 큰 달력', '/images/objects/calendar.svg', '/images/objects/thumbs/calendar.svg', 'lifestyle', 1, 2, 'axis_score', null, 600, 50, 120, 150, true),
+    ('accessory', '알람 시계', '규칙적인 일상을 위한 시계', '/images/objects/alarm-clock.svg', '/images/objects/thumbs/alarm-clock.svg', 'lifestyle', 1, 2, 'axis_score', null, 250, 80, 60, 60, true),
+    ('small_furniture', '정리함', '깔끔하게 정리된 수납함', '/images/objects/organizer.svg', '/images/objects/thumbs/organizer.svg', 'lifestyle', 1, 2, 'axis_score', null, 150, 250, 100, 120, true),
 
-    ('accessory', '여행 가방', '언제든 떠날 준비가 된 가방', '/images/objects/travel-bag.png', '/images/objects/thumbs/travel-bag.png', 'lifestyle', 4, 5, 'axis_score', null, 350, 400, 100, 80, true),
-    ('wall_deco', '세계 지도', '다음 목적지를 꿈꾸는 지도', '/images/objects/world-map.png', '/images/objects/thumbs/world-map.png', 'lifestyle', 4, 5, 'axis_score', null, 450, 30, 200, 150, true),
-    ('accessory', '폴라로이드 카메라', '순간을 담는 즉흥 카메라', '/images/objects/polaroid.png', '/images/objects/thumbs/polaroid.png', 'lifestyle', 4, 5, 'axis_score', null, 280, 120, 70, 80, true),
+    ('accessory', '여행 가방', '언제든 떠날 준비가 된 가방', '/images/objects/travel-bag.svg', '/images/objects/thumbs/travel-bag.svg', 'lifestyle', 4, 5, 'axis_score', null, 350, 400, 100, 80, true),
+    ('wall_deco', '세계 지도', '다음 목적지를 꿈꾸는 지도', '/images/objects/world-map.svg', '/images/objects/thumbs/world-map.svg', 'lifestyle', 4, 5, 'axis_score', null, 450, 30, 200, 150, true),
+    ('accessory', '폴라로이드 카메라', '순간을 담는 즉흥 카메라', '/images/objects/polaroid.svg', '/images/objects/thumbs/polaroid.svg', 'lifestyle', 4, 5, 'axis_score', null, 280, 120, 70, 80, true),
 
     -- 감성 스타일 축 오브젝트 (이성 1-2 / 감성 4-5)
-    ('accessory', '노트북', '분석과 작업을 위한 노트북', '/images/objects/laptop.png', '/images/objects/thumbs/laptop.png', 'emotion', 1, 2, 'axis_score', null, 200, 280, 100, 80, true),
-    ('small_furniture', '책꽂이', '지식을 담은 미니 책꽂이', '/images/objects/bookshelf-mini.png', '/images/objects/thumbs/bookshelf-mini.png', 'emotion', 1, 2, 'axis_score', null, 50, 200, 80, 150, true),
-    ('wall_deco', '화이트보드', '아이디어를 정리하는 보드', '/images/objects/whiteboard.png', '/images/objects/thumbs/whiteboard.png', 'emotion', 1, 2, 'axis_score', null, 550, 80, 150, 120, true),
+    ('accessory', '노트북', '분석과 작업을 위한 노트북', '/images/objects/laptop.svg', '/images/objects/thumbs/laptop.svg', 'emotion', 1, 2, 'axis_score', null, 200, 280, 100, 80, true),
+    ('small_furniture', '책꽂이', '지식을 담은 미니 책꽂이', '/images/objects/bookshelf-mini.svg', '/images/objects/thumbs/bookshelf-mini.svg', 'emotion', 1, 2, 'axis_score', null, 50, 200, 80, 150, true),
+    ('wall_deco', '화이트보드', '아이디어를 정리하는 보드', '/images/objects/whiteboard.svg', '/images/objects/thumbs/whiteboard.svg', 'emotion', 1, 2, 'axis_score', null, 550, 80, 150, 120, true),
 
-    ('accessory', '캔들', '분위기를 만드는 향초', '/images/objects/candle.png', '/images/objects/thumbs/candle.png', 'emotion', 4, 5, 'axis_score', null, 320, 150, 50, 70, true),
-    ('wall_deco', '감성 포스터', '마음을 담은 아트 포스터', '/images/objects/art-poster.png', '/images/objects/thumbs/art-poster.png', 'emotion', 4, 5, 'axis_score', null, 400, 20, 100, 140, true),
-    ('accessory', '일기장', '감정을 기록하는 다이어리', '/images/objects/diary.png', '/images/objects/thumbs/diary.png', 'emotion', 4, 5, 'axis_score', null, 180, 320, 60, 80, true),
+    ('accessory', '캔들', '분위기를 만드는 향초', '/images/objects/candle.svg', '/images/objects/thumbs/candle.svg', 'emotion', 4, 5, 'axis_score', null, 320, 150, 50, 70, true),
+    ('wall_deco', '감성 포스터', '마음을 담은 아트 포스터', '/images/objects/art-poster.svg', '/images/objects/thumbs/art-poster.svg', 'emotion', 4, 5, 'axis_score', null, 400, 20, 100, 140, true),
+    ('accessory', '일기장', '감정을 기록하는 다이어리', '/images/objects/diary.svg', '/images/objects/thumbs/diary.svg', 'emotion', 4, 5, 'axis_score', null, 180, 320, 60, 80, true),
 
     -- 미적 취향 축 오브젝트 (미니멀 1-2 / 맥시멀 4-5)
-    ('medium_furniture', '심플 데스크', '깔끔한 라인의 미니멀 책상', '/images/objects/simple-desk.png', '/images/objects/thumbs/simple-desk.png', 'aesthetic', 1, 2, 'axis_score', null, 300, 300, 180, 100, true),
-    ('small_furniture', '모던 의자', '군더더기 없는 의자', '/images/objects/modern-chair.png', '/images/objects/thumbs/modern-chair.png', 'aesthetic', 1, 2, 'axis_score', null, 350, 280, 80, 100, true),
-    ('plant', '미니멀 화분', '심플한 디자인의 화분', '/images/objects/minimal-plant.png', '/images/objects/thumbs/minimal-plant.png', 'aesthetic', 1, 2, 'axis_score', null, 500, 350, 60, 80, true),
+    ('medium_furniture', '심플 데스크', '깔끔한 라인의 미니멀 책상', '/images/objects/simple-desk.svg', '/images/objects/thumbs/simple-desk.svg', 'aesthetic', 1, 2, 'axis_score', null, 300, 300, 180, 100, true),
+    ('small_furniture', '모던 의자', '군더더기 없는 의자', '/images/objects/modern-chair.svg', '/images/objects/thumbs/modern-chair.svg', 'aesthetic', 1, 2, 'axis_score', null, 350, 280, 80, 100, true),
+    ('plant', '미니멀 화분', '심플한 디자인의 화분', '/images/objects/minimal-plant.svg', '/images/objects/thumbs/minimal-plant.svg', 'aesthetic', 1, 2, 'axis_score', null, 500, 350, 60, 80, true),
 
-    ('wall_deco', '갤러리 월', '다양한 액자로 가득한 벽', '/images/objects/gallery-wall.png', '/images/objects/thumbs/gallery-wall.png', 'aesthetic', 4, 5, 'axis_score', null, 200, 30, 250, 180, true),
-    ('accessory', '빈티지 소품들', '개성 있는 빈티지 소품 세트', '/images/objects/vintage-items.png', '/images/objects/thumbs/vintage-items.png', 'aesthetic', 4, 5, 'axis_score', null, 450, 280, 120, 100, true),
-    ('plant', '정글 화분', '풍성한 열대 식물', '/images/objects/jungle-plant.png', '/images/objects/thumbs/jungle-plant.png', 'aesthetic', 4, 5, 'axis_score', null, 100, 350, 100, 150, true),
+    ('wall_deco', '갤러리 월', '다양한 액자로 가득한 벽', '/images/objects/gallery-wall.svg', '/images/objects/thumbs/gallery-wall.svg', 'aesthetic', 4, 5, 'axis_score', null, 200, 30, 250, 180, true),
+    ('accessory', '빈티지 소품들', '개성 있는 빈티지 소품 세트', '/images/objects/vintage-items.svg', '/images/objects/thumbs/vintage-items.svg', 'aesthetic', 4, 5, 'axis_score', null, 450, 280, 120, 100, true),
+    ('plant', '정글 화분', '풍성한 열대 식물', '/images/objects/jungle-plant.svg', '/images/objects/thumbs/jungle-plant.svg', 'aesthetic', 4, 5, 'axis_score', null, 100, 350, 100, 150, true),
 
     -- 사회적 성향 축 오브젝트 (개인 1-2 / 협력 4-5)
-    ('small_furniture', '1인 소파', '나만의 공간을 위한 소파', '/images/objects/single-sofa.png', '/images/objects/thumbs/single-sofa.png', 'social', 1, 2, 'axis_score', null, 200, 350, 120, 100, true),
-    ('accessory', '헤드폰', '집중을 위한 노이즈캔슬링 헤드폰', '/images/objects/headphones.png', '/images/objects/thumbs/headphones.png', 'social', 1, 2, 'axis_score', null, 280, 100, 60, 70, true),
-    ('wall_deco', '개인 작업 보드', '나만의 프로젝트 보드', '/images/objects/personal-board.png', '/images/objects/thumbs/personal-board.png', 'social', 1, 2, 'axis_score', null, 500, 50, 120, 150, true),
+    ('small_furniture', '1인 소파', '나만의 공간을 위한 소파', '/images/objects/single-sofa.svg', '/images/objects/thumbs/single-sofa.svg', 'social', 1, 2, 'axis_score', null, 200, 350, 120, 100, true),
+    ('accessory', '헤드폰', '집중을 위한 노이즈캔슬링 헤드폰', '/images/objects/headphones.svg', '/images/objects/thumbs/headphones.svg', 'social', 1, 2, 'axis_score', null, 280, 100, 60, 70, true),
+    ('wall_deco', '개인 작업 보드', '나만의 프로젝트 보드', '/images/objects/personal-board.svg', '/images/objects/thumbs/personal-board.svg', 'social', 1, 2, 'axis_score', null, 500, 50, 120, 150, true),
 
-    ('large_furniture', '대형 소파', '여럿이 앉을 수 있는 소파', '/images/objects/large-sofa.png', '/images/objects/thumbs/large-sofa.png', 'social', 4, 5, 'axis_score', null, 250, 380, 220, 120, true),
-    ('accessory', '보드게임 세트', '함께 즐기는 보드게임', '/images/objects/board-games.png', '/images/objects/thumbs/board-games.png', 'social', 4, 5, 'axis_score', null, 350, 320, 100, 80, true),
-    ('medium_furniture', '커뮤니티 테이블', '모두가 둘러앉는 원형 테이블', '/images/objects/round-table.png', '/images/objects/thumbs/round-table.png', 'social', 4, 5, 'axis_score', null, 400, 350, 150, 100, true),
+    ('large_furniture', '대형 소파', '여럿이 앉을 수 있는 소파', '/images/objects/large-sofa.svg', '/images/objects/thumbs/large-sofa.svg', 'social', 4, 5, 'axis_score', null, 250, 380, 220, 120, true),
+    ('accessory', '보드게임 세트', '함께 즐기는 보드게임', '/images/objects/board-games.svg', '/images/objects/thumbs/board-games.svg', 'social', 4, 5, 'axis_score', null, 350, 320, 100, 80, true),
+    ('medium_furniture', '커뮤니티 테이블', '모두가 둘러앉는 원형 테이블', '/images/objects/round-table.svg', '/images/objects/thumbs/round-table.svg', 'social', 4, 5, 'axis_score', null, 400, 350, 150, 100, true),
 
     -- 도전 성향 축 오브젝트 (안정 1-2 / 모험 4-5)
-    ('accessory', '안락한 담요', '편안함을 주는 담요', '/images/objects/cozy-blanket.png', '/images/objects/thumbs/cozy-blanket.png', 'challenge', 1, 2, 'axis_score', null, 220, 400, 100, 60, true),
-    ('plant', '다육이 세트', '관리하기 쉬운 다육 식물', '/images/objects/succulents.png', '/images/objects/thumbs/succulents.png', 'challenge', 1, 2, 'axis_score', null, 480, 300, 80, 60, true),
-    ('wall_deco', '가족 사진', '소중한 추억을 담은 사진', '/images/objects/family-photo.png', '/images/objects/thumbs/family-photo.png', 'challenge', 1, 2, 'axis_score', null, 600, 100, 100, 120, true),
+    ('accessory', '안락한 담요', '편안함을 주는 담요', '/images/objects/cozy-blanket.svg', '/images/objects/thumbs/cozy-blanket.svg', 'challenge', 1, 2, 'axis_score', null, 220, 400, 100, 60, true),
+    ('plant', '다육이 세트', '관리하기 쉬운 다육 식물', '/images/objects/succulents.svg', '/images/objects/thumbs/succulents.svg', 'challenge', 1, 2, 'axis_score', null, 480, 300, 80, 60, true),
+    ('wall_deco', '가족 사진', '소중한 추억을 담은 사진', '/images/objects/family-photo.svg', '/images/objects/thumbs/family-photo.svg', 'challenge', 1, 2, 'axis_score', null, 600, 100, 100, 120, true),
 
-    ('accessory', '등산 장비', '새로운 도전을 위한 장비', '/images/objects/hiking-gear.png', '/images/objects/thumbs/hiking-gear.png', 'challenge', 4, 5, 'axis_score', null, 100, 420, 100, 80, true),
-    ('wall_deco', '모험 지도', '탐험했던 곳을 표시한 지도', '/images/objects/adventure-map.png', '/images/objects/thumbs/adventure-map.png', 'challenge', 4, 5, 'axis_score', null, 300, 20, 180, 130, true),
-    ('accessory', '스노클링 장비', '바다 탐험 장비', '/images/objects/snorkel.png', '/images/objects/thumbs/snorkel.png', 'challenge', 4, 5, 'axis_score', null, 550, 400, 80, 60, true),
+    ('accessory', '등산 장비', '새로운 도전을 위한 장비', '/images/objects/hiking-gear.svg', '/images/objects/thumbs/hiking-gear.svg', 'challenge', 4, 5, 'axis_score', null, 100, 420, 100, 80, true),
+    ('wall_deco', '모험 지도', '탐험했던 곳을 표시한 지도', '/images/objects/adventure-map.svg', '/images/objects/thumbs/adventure-map.svg', 'challenge', 4, 5, 'axis_score', null, 300, 20, 180, 130, true),
+    ('accessory', '스노클링 장비', '바다 탐험 장비', '/images/objects/snorkel.svg', '/images/objects/thumbs/snorkel.svg', 'challenge', 4, 5, 'axis_score', null, 550, 400, 80, 60, true),
 
     -- 관계 방식 축 오브젝트 (깊은 관계 1-2 / 넓은 관계 4-5)
-    ('accessory', '커플 머그컵', '소중한 사람과의 페어 머그', '/images/objects/couple-mugs.png', '/images/objects/thumbs/couple-mugs.png', 'relationship', 1, 2, 'axis_score', null, 320, 250, 70, 60, true),
-    ('wall_deco', '베스트프렌드 액자', '절친과의 추억 사진', '/images/objects/bestfriend-frame.png', '/images/objects/thumbs/bestfriend-frame.png', 'relationship', 1, 2, 'axis_score', null, 550, 80, 80, 100, true),
-    ('accessory', '편지 세트', '마음을 담은 손편지 도구', '/images/objects/letter-set.png', '/images/objects/thumbs/letter-set.png', 'relationship', 1, 2, 'axis_score', null, 180, 180, 60, 50, true),
+    ('accessory', '커플 머그컵', '소중한 사람과의 페어 머그', '/images/objects/couple-mugs.svg', '/images/objects/thumbs/couple-mugs.svg', 'relationship', 1, 2, 'axis_score', null, 320, 250, 70, 60, true),
+    ('wall_deco', '베스트프렌드 액자', '절친과의 추억 사진', '/images/objects/bestfriend-frame.svg', '/images/objects/thumbs/bestfriend-frame.svg', 'relationship', 1, 2, 'axis_score', null, 550, 80, 80, 100, true),
+    ('accessory', '편지 세트', '마음을 담은 손편지 도구', '/images/objects/letter-set.svg', '/images/objects/thumbs/letter-set.svg', 'relationship', 1, 2, 'axis_score', null, 180, 180, 60, 50, true),
 
-    ('wall_deco', '단체 사진 월', '다양한 친구들과의 사진', '/images/objects/group-photos.png', '/images/objects/thumbs/group-photos.png', 'relationship', 4, 5, 'axis_score', null, 150, 30, 200, 150, true),
-    ('accessory', '명함 홀더', '다양한 인맥의 명함', '/images/objects/card-holder.png', '/images/objects/thumbs/card-holder.png', 'relationship', 4, 5, 'axis_score', null, 420, 200, 60, 50, true),
-    ('accessory', '파티 소품들', '모임을 위한 파티 용품', '/images/objects/party-items.png', '/images/objects/thumbs/party-items.png', 'relationship', 4, 5, 'axis_score', null, 480, 380, 120, 80, true),
+    ('wall_deco', '단체 사진 월', '다양한 친구들과의 사진', '/images/objects/group-photos.svg', '/images/objects/thumbs/group-photos.svg', 'relationship', 4, 5, 'axis_score', null, 150, 30, 200, 150, true),
+    ('accessory', '명함 홀더', '다양한 인맥의 명함', '/images/objects/card-holder.svg', '/images/objects/thumbs/card-holder.svg', 'relationship', 4, 5, 'axis_score', null, 420, 200, 60, 50, true),
+    ('accessory', '파티 소품들', '모임을 위한 파티 용품', '/images/objects/party-items.svg', '/images/objects/thumbs/party-items.svg', 'relationship', 4, 5, 'axis_score', null, 480, 380, 120, 80, true),
 
     -- 일차별 획득 오브젝트 (특별 보상)
-    ('character', 'Day 1 웰컴 인형', '첫날을 축하하는 작은 인형', '/images/objects/welcome-plush.png', '/images/objects/thumbs/welcome-plush.png', null, null, null, 'day', 1, 400, 300, 80, 100, true),
-    ('accessory', '1주 완료 트로피', '첫 주를 완료한 기념품', '/images/objects/week1-trophy.png', '/images/objects/thumbs/week1-trophy.png', null, null, null, 'day', 7, 350, 150, 60, 80, true),
-    ('wall_deco', '2주 완료 배너', '반환점 통과 축하 배너', '/images/objects/week2-banner.png', '/images/objects/thumbs/week2-banner.png', null, null, null, 'day', 14, 250, 10, 150, 80, true),
-    ('accessory', '3주 완료 메달', '거의 다 왔어요!', '/images/objects/week3-medal.png', '/images/objects/thumbs/week3-medal.png', null, null, null, 'day', 21, 420, 180, 50, 60, true),
-    ('character', '시즌 완료 마스코트', '시즌 1 완료 축하 마스코트', '/images/objects/season-complete.png', '/images/objects/thumbs/season-complete.png', null, null, null, 'day', 24, 450, 350, 120, 150, true)
+    ('character', 'Day 1 웰컴 인형', '첫날을 축하하는 작은 인형', '/images/objects/welcome-plush.svg', '/images/objects/thumbs/welcome-plush.svg', null, null, null, 'day', 1, 400, 300, 80, 100, true),
+    ('accessory', '1주 완료 트로피', '첫 주를 완료한 기념품', '/images/objects/week1-trophy.svg', '/images/objects/thumbs/week1-trophy.svg', null, null, null, 'day', 7, 350, 150, 60, 80, true),
+    ('wall_deco', '2주 완료 배너', '반환점 통과 축하 배너', '/images/objects/week2-banner.svg', '/images/objects/thumbs/week2-banner.svg', null, null, null, 'day', 14, 250, 10, 150, 80, true),
+    ('accessory', '3주 완료 메달', '거의 다 왔어요!', '/images/objects/week3-medal.svg', '/images/objects/thumbs/week3-medal.svg', null, null, null, 'day', 21, 420, 180, 50, 60, true),
+    ('character', '시즌 완료 마스코트', '시즌 1 완료 축하 마스코트', '/images/objects/season-complete.svg', '/images/objects/thumbs/season-complete.svg', null, null, null, 'day', 24, 450, 350, 120, 150, true)
 
 ) as o(category_code, name, description, image_url, thumbnail_url, axis_code, min_score, max_score, acquisition_type, acquisition_day, default_x, default_y, width, height, is_movable)
 join categories c on c.code = o.category_code

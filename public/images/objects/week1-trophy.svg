@@ -1,0 +1,22 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1주 완료 트로피: 특별 보상 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 트로피 컵 -->
+  <path d="M30 20 L30 50 Q30 65 50 65 Q70 65 70 50 L70 20 Z" fill="#f1c40f"/>
+  <path d="M33 23 L33 48 Q33 60 50 60 Q67 60 67 48 L67 23 Z" fill="#f39c12"/>
+  <!-- 손잡이 -->
+  <path d="M25 25 Q10 25 10 38 Q10 50 25 50" stroke="#f1c40f" stroke-width="6" fill="none"/>
+  <path d="M75 25 Q90 25 90 38 Q90 50 75 50" stroke="#f1c40f" stroke-width="6" fill="none"/>
+  <!-- 받침대 -->
+  <rect x="40" y="65" width="20" height="10" fill="#8b4513"/>
+  <rect x="35" y="75" width="30" height="8" fill="#a0522d"/>
+  <rect x="30" y="83" width="40" height="12" rx="2" fill="#5c4033"/>
+  <rect x="32" y="85" width="36" height="8" rx="1" fill="#8b4513"/>
+  <!-- 별 장식 -->
+  <polygon points="50,30 53,40 63,40 55,46 58,56 50,50 42,56 45,46 37,40 47,40" fill="#fff"/>
+  <!-- 1 표시 -->
+  <text x="50" y="92" text-anchor="middle" fill="#f1c40f" font-size="8" font-weight="bold">1 WEEK</text>
+  <!-- 반짝임 -->
+  <circle cx="35" cy="30" r="2" fill="#fff" opacity="0.7"/>
+  <circle cx="60" cy="25" r="3" fill="#fff" opacity="0.5"/>
+</svg>

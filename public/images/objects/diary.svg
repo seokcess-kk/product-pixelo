@@ -1,0 +1,28 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 일기장: 감성 스타일, 기록 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 일기장 본체 -->
+  <rect x="20" y="10" width="60" height="80" rx="3" fill="#d4a574"/>
+  <rect x="25" y="10" width="55" height="80" rx="3" fill="#f5deb3"/>
+  <!-- 책등 -->
+  <rect x="20" y="10" width="8" height="80" fill="#c9a86c"/>
+  <!-- 바인딩 라인 -->
+  <line x1="28" y1="10" x2="28" y2="90" stroke="#8b7355" stroke-width="1"/>
+  <!-- 페이지 라인 -->
+  <line x1="35" y1="25" x2="72" y2="25" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="32" x2="72" y2="32" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="39" x2="72" y2="39" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="46" x2="72" y2="46" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="53" x2="72" y2="53" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="60" x2="72" y2="60" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="67" x2="72" y2="67" stroke="#d4a574" stroke-width="1"/>
+  <line x1="35" y1="74" x2="72" y2="74" stroke="#d4a574" stroke-width="1"/>
+  <!-- 리본 북마크 -->
+  <rect x="65" y="5" width="5" height="20" fill="#ff6b6b"/>
+  <polygon points="65,25 67.5,30 70,25" fill="#ff6b6b"/>
+  <!-- 펜 -->
+  <rect x="75" y="40" width="4" height="45" fill="#2c3e50" transform="rotate(15 77 62)"/>
+  <polygon points="75,85 77,92 79,85" fill="#f39c12" transform="rotate(15 77 88)"/>
+  <!-- 하트 장식 -->
+  <path d="M55 18 C55 15 50 15 50 19 C50 15 45 15 45 18 C45 22 50 26 50 26 C50 26 55 22 55 18" fill="#ff6b6b"/>
+</svg>

@@ -1,0 +1,29 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 화이트보드: 이성 스타일, 아이디어 정리 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 보드 프레임 -->
+  <rect x="5" y="10" width="90" height="70" rx="2" fill="#7f8c8d"/>
+  <!-- 화이트보드 표면 -->
+  <rect x="8" y="13" width="84" height="64" fill="#fff"/>
+  <!-- 필기 내용 -->
+  <line x1="15" y1="25" x2="45" y2="25" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="15" y1="35" x2="60" y2="35" stroke="#3498db" stroke-width="2"/>
+  <line x1="15" y1="45" x2="50" y2="45" stroke="#2c3e50" stroke-width="2"/>
+  <!-- 차트/다이어그램 -->
+  <rect x="55" y="20" width="30" height="25" fill="none" stroke="#e74c3c" stroke-width="2"/>
+  <line x1="55" y1="30" x2="85" y2="30" stroke="#e74c3c" stroke-width="1"/>
+  <line x1="70" y1="20" x2="70" y2="45" stroke="#e74c3c" stroke-width="1"/>
+  <!-- 체크박스 -->
+  <rect x="15" y="52" width="8" height="8" fill="none" stroke="#27ae60" stroke-width="2"/>
+  <line x1="17" y1="56" x2="20" y2="59" stroke="#27ae60" stroke-width="2"/>
+  <line x1="20" y1="59" x2="25" y2="53" stroke="#27ae60" stroke-width="2"/>
+  <line x1="28" y1="56" x2="55" y2="56" stroke="#2c3e50" stroke-width="2"/>
+  <rect x="15" y="63" width="8" height="8" fill="none" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="28" y1="67" x2="50" y2="67" stroke="#2c3e50" stroke-width="2"/>
+  <!-- 마커 트레이 -->
+  <rect x="5" y="82" width="90" height="8" fill="#95a5a6"/>
+  <rect x="15" y="83" width="12" height="6" rx="1" fill="#e74c3c"/>
+  <rect x="30" y="83" width="12" height="6" rx="1" fill="#3498db"/>
+  <rect x="45" y="83" width="12" height="6" rx="1" fill="#27ae60"/>
+  <rect x="60" y="83" width="12" height="6" rx="1" fill="#2c3e50"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 작은 화분: 내향 스타일, 초록색 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 화분 -->
+  <path d="M30 60 L35 95 L65 95 L70 60 Z" fill="#d2691e"/>
+  <rect x="28" y="55" width="44" height="8" rx="2" fill="#cd853f"/>
+  <!-- 흙 -->
+  <ellipse cx="50" cy="60" rx="18" ry="5" fill="#5c4033"/>
+  <!-- 잎 -->
+  <ellipse cx="50" cy="45" rx="12" ry="18" fill="#228b22"/>
+  <ellipse cx="38" cy="40" rx="8" ry="14" fill="#2e8b57" transform="rotate(-20 38 40)"/>
+  <ellipse cx="62" cy="40" rx="8" ry="14" fill="#2e8b57" transform="rotate(20 62 40)"/>
+  <ellipse cx="50" cy="35" rx="6" ry="12" fill="#32cd32"/>
+  <!-- 픽셀 디테일 -->
+  <rect x="46" y="28" width="4" height="4" fill="#90ee90"/>
+  <rect x="54" y="32" width="4" height="4" fill="#90ee90"/>
+  <rect x="40" y="38" width="4" height="4" fill="#90ee90"/>
+</svg>

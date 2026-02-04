@@ -1,0 +1,56 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 단체 사진 월: 넓은 관계 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 사진 1 (큰 단체) -->
+  <rect x="5" y="5" width="45" height="35" fill="#8b4513"/>
+  <rect x="7" y="7" width="41" height="31" fill="#fff"/>
+  <rect x="9" y="9" width="37" height="27" fill="#87ceeb"/>
+  <!-- 단체 사람들 -->
+  <circle cx="15" cy="22" r="4" fill="#f5deb3"/>
+  <circle cx="23" cy="20" r="4" fill="#f5deb3"/>
+  <circle cx="31" cy="22" r="4" fill="#f5deb3"/>
+  <circle cx="39" cy="20" r="4" fill="#f5deb3"/>
+  <circle cx="19" cy="30" r="3" fill="#f5deb3"/>
+  <circle cx="27" cy="28" r="3" fill="#f5deb3"/>
+  <circle cx="35" cy="30" r="3" fill="#f5deb3"/>
+  <!-- 사진 2 -->
+  <rect x="55" y="5" width="40" height="30" fill="#e67e22"/>
+  <rect x="57" y="7" width="36" height="26" fill="#fff"/>
+  <rect x="59" y="9" width="32" height="22" fill="#27ae60"/>
+  <circle cx="68" cy="18" r="4" fill="#f5deb3"/>
+  <circle cx="78" cy="18" r="4" fill="#f5deb3"/>
+  <circle cx="88" cy="18" r="4" fill="#f5deb3"/>
+  <!-- 사진 3 -->
+  <rect x="5" y="45" width="30" height="25" fill="#9b59b6"/>
+  <rect x="7" y="47" width="26" height="21" fill="#fff"/>
+  <rect x="9" y="49" width="22" height="17" fill="#f1c40f"/>
+  <circle cx="15" cy="56" r="3" fill="#f5deb3"/>
+  <circle cx="25" cy="56" r="3" fill="#f5deb3"/>
+  <!-- 사진 4 -->
+  <rect x="40" y="40" width="25" height="30" fill="#3498db"/>
+  <rect x="42" y="42" width="21" height="26" fill="#fff"/>
+  <rect x="44" y="44" width="17" height="22" fill="#e74c3c"/>
+  <circle cx="48" cy="52" r="3" fill="#f5deb3"/>
+  <circle cx="56" cy="52" r="3" fill="#f5deb3"/>
+  <circle cx="52" cy="60" r="3" fill="#f5deb3"/>
+  <!-- 사진 5 -->
+  <rect x="70" y="40" width="25" height="25" fill="#1abc9c"/>
+  <rect x="72" y="42" width="21" height="21" fill="#fff"/>
+  <rect x="74" y="44" width="17" height="17" fill="#9b59b6"/>
+  <circle cx="78" cy="52" r="3" fill="#f5deb3"/>
+  <circle cx="86" cy="52" r="3" fill="#f5deb3"/>
+  <!-- 사진 6 -->
+  <rect x="5" y="75" width="40" height="20" fill="#e74c3c"/>
+  <rect x="7" y="77" width="36" height="16" fill="#fff"/>
+  <rect x="9" y="79" width="32" height="12" fill="#3498db"/>
+  <circle cx="15" cy="85" r="3" fill="#f5deb3"/>
+  <circle cx="23" cy="85" r="3" fill="#f5deb3"/>
+  <circle cx="31" cy="85" r="3" fill="#f5deb3"/>
+  <!-- 사진 7 -->
+  <rect x="50" y="72" width="45" height="23" fill="#f39c12"/>
+  <rect x="52" y="74" width="41" height="19" fill="#fff"/>
+  <rect x="54" y="76" width="37" height="15" fill="#27ae60"/>
+  <circle cx="62" cy="83" r="3" fill="#f5deb3"/>
+  <circle cx="72" cy="83" r="3" fill="#f5deb3"/>
+  <circle cx="82" cy="83" r="3" fill="#f5deb3"/>
+</svg>

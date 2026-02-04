@@ -1,0 +1,22 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 폴라로이드 카메라: 즉흥 스타일, 레트로 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 카메라 본체 -->
+  <rect x="15" y="25" width="70" height="55" rx="5" fill="#ecf0f1"/>
+  <rect x="18" y="28" width="64" height="49" rx="4" fill="#fff"/>
+  <!-- 레인보우 스트라이프 -->
+  <rect x="15" y="68" width="70" height="4" fill="#e74c3c"/>
+  <rect x="15" y="72" width="70" height="4" fill="#f39c12"/>
+  <rect x="15" y="76" width="70" height="4" fill="#27ae60"/>
+  <!-- 렌즈 -->
+  <circle cx="50" cy="45" r="18" fill="#2c3e50"/>
+  <circle cx="50" cy="45" r="15" fill="#34495e"/>
+  <circle cx="50" cy="45" r="10" fill="#1a252f"/>
+  <circle cx="50" cy="45" r="5" fill="#5dade2"/>
+  <!-- 플래시 -->
+  <rect x="65" y="30" width="15" height="12" rx="2" fill="#bdc3c7"/>
+  <!-- 뷰파인더 -->
+  <rect x="20" y="30" width="12" height="8" rx="1" fill="#2c3e50"/>
+  <!-- 셔터 버튼 -->
+  <circle cx="80" cy="20" r="6" fill="#e74c3c"/>
+</svg>

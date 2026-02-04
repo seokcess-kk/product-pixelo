@@ -1,0 +1,32 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 모험 지도: 모험 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 지도 배경 (말린 양피지) -->
+  <path d="M10 15 Q5 50 10 85 L15 90 L85 90 L90 85 Q95 50 90 15 L85 10 L15 10 Z" fill="#f5e6d3"/>
+  <path d="M12 17 Q7 50 12 83 L17 88 L83 88 L88 83 Q93 50 88 17 L83 12 L17 12 Z" fill="#faf0e6"/>
+  <!-- 지형 표시 -->
+  <!-- 산 -->
+  <polygon points="25,60 35,35 45,60" fill="#7f8c8d"/>
+  <polygon points="35,60 45,40 55,60" fill="#95a5a6"/>
+  <polygon points="30,60 40,42 50,60" fill="#bdc3c7"/>
+  <!-- 숲 -->
+  <circle cx="70" cy="45" r="8" fill="#27ae60"/>
+  <circle cx="78" cy="50" r="6" fill="#2ecc71"/>
+  <circle cx="65" cy="52" r="7" fill="#27ae60"/>
+  <!-- 강 -->
+  <path d="M20 70 Q35 65 50 75 Q65 85 80 78" stroke="#3498db" stroke-width="3" fill="none"/>
+  <!-- 경로 표시 -->
+  <path d="M20 25 L35 40 L55 35 L70 55 L85 50" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3" fill="none"/>
+  <!-- 마커들 -->
+  <circle cx="20" cy="25" r="4" fill="#e74c3c"/>
+  <text x="20" y="22" text-anchor="middle" fill="#c0392b" font-size="8">1</text>
+  <circle cx="55" cy="35" r="4" fill="#f39c12"/>
+  <text x="55" y="32" text-anchor="middle" fill="#d35400" font-size="8">2</text>
+  <circle cx="85" cy="50" r="5" fill="#27ae60"/>
+  <text x="85" y="47" text-anchor="middle" fill="#1e8449" font-size="8">★</text>
+  <!-- 나침반 장식 -->
+  <circle cx="78" cy="22" r="8" fill="#f5deb3" stroke="#8b4513" stroke-width="1"/>
+  <polygon points="78,16 77,22 78,20 79,22" fill="#e74c3c"/>
+  <polygon points="78,28 77,22 78,24 79,22" fill="#2c3e50"/>
+  <text x="78" y="18" text-anchor="middle" fill="#2c3e50" font-size="4">N</text>
+</svg>

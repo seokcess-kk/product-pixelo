@@ -1,0 +1,26 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 커플 머그컵: 깊은 관계 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 왼쪽 머그 -->
+  <rect x="10" y="30" width="35" height="45" rx="3" fill="#ff6b6b"/>
+  <rect x="13" y="33" width="29" height="39" rx="2" fill="#ee5a5a"/>
+  <!-- 왼쪽 손잡이 -->
+  <path d="M8 40 Q0 50 8 60" stroke="#ff6b6b" stroke-width="6" fill="none"/>
+  <!-- 왼쪽 하트 -->
+  <path d="M27 50 C27 46 22 46 22 50 C22 46 17 46 17 50 C17 56 22 60 22 60 C22 60 27 56 27 50" fill="#fff"/>
+  <!-- 오른쪽 머그 -->
+  <rect x="55" y="30" width="35" height="45" rx="3" fill="#5dade2"/>
+  <rect x="58" y="33" width="29" height="39" rx="2" fill="#4a9fd4"/>
+  <!-- 오른쪽 손잡이 -->
+  <path d="M92 40 Q100 50 92 60" stroke="#5dade2" stroke-width="6" fill="none"/>
+  <!-- 오른쪽 하트 -->
+  <path d="M77 50 C77 46 72 46 72 50 C72 46 67 46 67 50 C67 56 72 60 72 60 C72 60 77 56 77 50" fill="#fff"/>
+  <!-- 스팀 -->
+  <path d="M25 25 Q27 20 25 15" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+  <path d="M30 22 Q32 17 30 12" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+  <path d="M70 25 Q72 20 70 15" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+  <path d="M75 22 Q77 17 75 12" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+  <!-- 연결 하트 -->
+  <path d="M50 85 C50 80 45 80 45 85 C45 80 40 80 40 85 C40 92 45 97 45 97 C45 97 50 92 50 85" fill="#e74c3c"/>
+  <path d="M60 85 C60 80 55 80 55 85 C55 80 50 80 50 85 C50 92 55 97 55 97 C55 97 60 92 60 85" fill="#e74c3c"/>
+</svg>

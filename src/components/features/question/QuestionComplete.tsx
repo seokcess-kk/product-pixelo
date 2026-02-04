@@ -1,7 +1,10 @@
 'use client'
 
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 import type { AcquiredObject, AxisScoreSummary } from '@/types/questions'
+
+const PLACEHOLDER_IMAGE = '/images/placeholder-object.svg'
 
 interface QuestionCompleteProps {
   axisScores: AxisScoreSummary[]
@@ -53,26 +56,7 @@ export function QuestionComplete({
 
             <div className="grid grid-cols-2 gap-4">
               {acquiredObjects.map((obj) => (
-                <div
-                  key={obj.id}
-                  className="flex flex-col items-center p-4 bg-gray-50 border-2 border-gray-200"
-                >
-                  <div className="w-16 h-16 bg-gray-100 border-2 border-pixel-black mb-2 flex items-center justify-center overflow-hidden">
-                    {obj.thumbnailUrl || obj.imageUrl ? (
-                      <img
-                        src={obj.thumbnailUrl || obj.imageUrl}
-                        alt={obj.name}
-                        className="w-full h-full object-contain"
-                        style={{ imageRendering: 'pixelated' }}
-                      />
-                    ) : (
-                      <div className="w-8 h-8 bg-primary-300" />
-                    )}
-                  </div>
-                  <span className="font-sans text-sm text-center text-foreground">
-                    {obj.name}
-                  </span>
-                </div>
+                <ObjectCard key={obj.id} object={obj} />
               ))}
             </div>
           </div>
@@ -157,6 +141,37 @@ function AxisScoreBar({ axis }: AxisScoreBarProps) {
           style={{ left: `${normalizedScore}%` }}
         />
       </div>
+    </div>
+  )
+}
+
+interface ObjectCardProps {
+  object: AcquiredObject
+}
+
+function ObjectCard({ object }: ObjectCardProps) {
+  const [imgSrc, setImgSrc] = useState(
+    object.thumbnailUrl || object.imageUrl || PLACEHOLDER_IMAGE
+  )
+
+  const handleError = () => {
+    setImgSrc(PLACEHOLDER_IMAGE)
+  }
+
+  return (
+    <div className="flex flex-col items-center p-4 bg-gray-50 border-2 border-gray-200">
+      <div className="w-16 h-16 bg-gray-100 border-2 border-pixel-black mb-2 flex items-center justify-center overflow-hidden">
+        <img
+          src={imgSrc}
+          alt={object.name}
+          className="w-full h-full object-contain"
+          style={{ imageRendering: 'pixelated' }}
+          onError={handleError}
+        />
+      </div>
+      <span className="font-sans text-sm text-center text-foreground">
+        {object.name}
+      </span>
     </div>
   )
 }

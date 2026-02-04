@@ -1,0 +1,31 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 가족 사진: 안정 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 액자 프레임 -->
+  <rect x="10" y="10" width="80" height="70" rx="3" fill="#8b4513"/>
+  <rect x="14" y="14" width="72" height="62" rx="2" fill="#5c4033"/>
+  <!-- 사진 영역 -->
+  <rect x="17" y="17" width="66" height="56" fill="#87ceeb"/>
+  <!-- 배경 (공원 느낌) -->
+  <rect x="17" y="55" width="66" height="18" fill="#27ae60"/>
+  <ellipse cx="75" cy="35" rx="15" ry="20" fill="#2ecc71"/>
+  <ellipse cx="25" cy="40" rx="12" ry="15" fill="#2ecc71"/>
+  <!-- 사람들 (가족) -->
+  <!-- 아빠 -->
+  <circle cx="30" cy="42" r="6" fill="#f5deb3"/>
+  <rect x="26" y="48" width="8" height="15" fill="#3498db"/>
+  <!-- 엄마 -->
+  <circle cx="50" cy="44" r="5" fill="#f5deb3"/>
+  <rect x="46" y="49" width="8" height="13" fill="#e74c3c"/>
+  <!-- 아이 1 -->
+  <circle cx="70" cy="48" r="4" fill="#f5deb3"/>
+  <rect x="67" y="52" width="6" height="10" fill="#f1c40f"/>
+  <!-- 아이 2 -->
+  <circle cx="40" cy="50" r="4" fill="#f5deb3"/>
+  <rect x="37" y="54" width="6" height="9" fill="#9b59b6"/>
+  <!-- 태양 -->
+  <circle cx="75" cy="25" r="6" fill="#f1c40f"/>
+  <!-- 받침대 -->
+  <rect x="35" y="80" width="30" height="5" fill="#5c4033"/>
+  <rect x="45" y="75" width="10" height="10" fill="#8b4513"/>
+</svg>

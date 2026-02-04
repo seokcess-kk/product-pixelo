@@ -1,6 +1,6 @@
 'use client'
 
-import { use, useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
@@ -18,9 +18,9 @@ import type { InventoryItem, PixeloObject, UserObject } from '@/types'
 // =============================================================================
 
 interface SpacePageProps {
-  params: Promise<{
+  params: {
     season: string
-  }>
+  }
 }
 
 // =============================================================================
@@ -28,7 +28,7 @@ interface SpacePageProps {
 // =============================================================================
 
 export default function SpacePage({ params }: SpacePageProps) {
-  const { season } = use(params)
+  const { season } = params
   const seasonNumber = parseInt(season, 10) || 1
   const router = useRouter()
 

@@ -1,0 +1,17 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 모던 의자: 미니멀 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 의자 다리 -->
+  <rect x="25" y="75" width="4" height="20" fill="#2c3e50"/>
+  <rect x="71" y="75" width="4" height="20" fill="#2c3e50"/>
+  <!-- 의자 좌석 -->
+  <rect x="20" y="60" width="60" height="18" rx="2" fill="#ecf0f1"/>
+  <rect x="22" y="62" width="56" height="14" rx="1" fill="#bdc3c7"/>
+  <!-- 의자 등받이 -->
+  <rect x="20" y="20" width="60" height="42" rx="3" fill="#ecf0f1"/>
+  <rect x="23" y="23" width="54" height="36" rx="2" fill="#bdc3c7"/>
+  <!-- 등받이 라인 디테일 -->
+  <line x1="35" y1="28" x2="35" y2="54" stroke="#95a5a6" stroke-width="2"/>
+  <line x1="50" y1="28" x2="50" y2="54" stroke="#95a5a6" stroke-width="2"/>
+  <line x1="65" y1="28" x2="65" y2="54" stroke="#95a5a6" stroke-width="2"/>
+</svg>

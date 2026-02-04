@@ -1,0 +1,21 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 파티 테이블: 외향 스타일, 밝은 색상 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 테이블 다리 -->
+  <rect x="15" y="55" width="8" height="40" fill="#8b4513"/>
+  <rect x="77" y="55" width="8" height="40" fill="#8b4513"/>
+  <!-- 테이블 상판 -->
+  <rect x="5" y="45" width="90" height="15" rx="3" fill="#daa520"/>
+  <rect x="8" y="48" width="84" height="9" rx="2" fill="#f4a460"/>
+  <!-- 파티 장식들 -->
+  <circle cx="25" cy="40" r="6" fill="#ff6b6b"/>
+  <circle cx="50" cy="38" r="7" fill="#4ecdc4"/>
+  <circle cx="75" cy="40" r="6" fill="#ffe66d"/>
+  <!-- 컵들 -->
+  <rect x="35" y="30" width="8" height="12" fill="#ff6b6b"/>
+  <rect x="57" y="30" width="8" height="12" fill="#4ecdc4"/>
+  <!-- 색종이 -->
+  <rect x="20" y="25" width="4" height="4" fill="#ff6b6b" transform="rotate(15 22 27)"/>
+  <rect x="70" y="28" width="4" height="4" fill="#ffe66d" transform="rotate(-10 72 30)"/>
+  <rect x="45" y="22" width="4" height="4" fill="#4ecdc4" transform="rotate(25 47 24)"/>
+</svg>

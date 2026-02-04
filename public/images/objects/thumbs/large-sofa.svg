@@ -1,0 +1,25 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 대형 소파: 협력 스타일 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 소파 다리 -->
+  <rect x="8" y="85" width="6" height="10" rx="2" fill="#5c4033"/>
+  <rect x="86" y="85" width="6" height="10" rx="2" fill="#5c4033"/>
+  <!-- 소파 본체 -->
+  <rect x="3" y="50" width="94" height="38" rx="6" fill="#3498db"/>
+  <!-- 좌석 쿠션들 -->
+  <rect x="8" y="58" width="28" height="22" rx="4" fill="#5dade2"/>
+  <rect x="38" y="58" width="24" height="22" rx="4" fill="#5dade2"/>
+  <rect x="64" y="58" width="28" height="22" rx="4" fill="#5dade2"/>
+  <!-- 등받이 -->
+  <rect x="5" y="28" width="90" height="28" rx="8" fill="#3498db"/>
+  <rect x="10" y="32" width="80" height="20" rx="5" fill="#5dade2"/>
+  <!-- 팔걸이 -->
+  <rect x="0" y="42" width="10" height="40" rx="4" fill="#3498db"/>
+  <rect x="90" y="42" width="10" height="40" rx="4" fill="#3498db"/>
+  <!-- 쿠션 라인 -->
+  <line x1="36" y1="58" x2="36" y2="80" stroke="#2980b9" stroke-width="2"/>
+  <line x1="64" y1="58" x2="64" y2="80" stroke="#2980b9" stroke-width="2"/>
+  <!-- 장식 쿠션 -->
+  <rect x="15" y="48" width="15" height="12" rx="3" fill="#f1c40f"/>
+  <rect x="70" y="48" width="15" height="12" rx="3" fill="#e74c3c"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 캔들: 감성 스타일, 분위기 -->
+  <rect width="100" height="100" fill="transparent"/>
+  <!-- 불꽃 광선 효과 -->
+  <circle cx="50" cy="25" r="20" fill="#ffd700" opacity="0.2"/>
+  <circle cx="50" cy="25" r="15" fill="#ffa500" opacity="0.3"/>
+  <!-- 불꽃 -->
+  <ellipse cx="50" cy="25" rx="8" ry="15" fill="#ff6b35"/>
+  <ellipse cx="50" cy="22" rx="5" ry="10" fill="#ffa500"/>
+  <ellipse cx="50" cy="20" rx="3" ry="6" fill="#ffcc00"/>
+  <ellipse cx="50" cy="18" rx="1.5" ry="3" fill="#fff"/>
+  <!-- 심지 -->
+  <rect x="49" y="35" width="2" height="8" fill="#2c3e50"/>
+  <!-- 캔들 용기 -->
+  <rect x="30" y="42" width="40" height="50" rx="3" fill="#d4a574"/>
+  <rect x="33" y="45" width="34" height="44" rx="2" fill="#e8c9a0"/>
+  <!-- 왁스 표면 -->
+  <ellipse cx="50" cy="45" rx="17" ry="5" fill="#f5deb3"/>
+  <!-- 유리 용기 반사 -->
+  <rect x="62" y="50" width="3" height="30" fill="#fff" opacity="0.3" rx="1"/>
+  <!-- 라벨 -->
+  <rect x="38" y="65" width="24" height="15" fill="#8b4513" rx="1"/>
+  <rect x="40" y="67" width="20" height="4" fill="#d4a574"/>
+  <rect x="42" y="73" width="16" height="2" fill="#d4a574"/>
+</svg>
