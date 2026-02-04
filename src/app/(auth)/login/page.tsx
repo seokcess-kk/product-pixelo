@@ -7,6 +7,7 @@ import { PixelButton, PixelLogo } from '@/components/features/onboarding'
 import { cn } from '@/lib/utils'
 
 type OAuthProvider = 'kakao' | 'naver'
+type AuthMode = 'login' | 'signup'
 
 interface LoginError {
   provider?: OAuthProvider
@@ -52,6 +53,11 @@ function LoginPageSkeleton() {
 function LoginPageContent() {
   const [loadingProvider, setLoadingProvider] = useState<OAuthProvider | null>(null)
   const [error, setError] = useState<LoginError | null>(null)
+  const [authMode, setAuthMode] = useState<AuthMode>('login')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isEmailLoading, setIsEmailLoading] = useState(false)
+  const [successMessage, setSuccessMessage] = useState<string | null>(null)
   const searchParams = useSearchParams()
   const router = useRouter()
   const supabase = createClient()
@@ -69,10 +75,11 @@ function LoginPageContent() {
   const handleOAuthLogin = async (provider: OAuthProvider) => {
     setLoadingProvider(provider)
     setError(null)
+    setSuccessMessage(null)
 
     try {
       const { error } = await supabase.auth.signInWithOAuth({
-        provider,
+        provider: provider as 'kakao',
         options: {
           redirectTo: `${window.location.origin}/callback`,
           queryParams: provider === 'kakao' ? {
@@ -95,11 +102,58 @@ function LoginPageContent() {
     }
   }
 
+  const handleEmailAuth = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsEmailLoading(true)
+    setError(null)
+    setSuccessMessage(null)
+
+    try {
+      if (authMode === 'signup') {
+        // 회원가입
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: `${window.location.origin}/callback`,
+          },
+        })
+
+        if (error) {
+          throw error
+        }
+
+        setSuccessMessage('회원가입 완료! 이메일을 확인해 주세요. (이메일 확인이 비활성화된 경우 바로 로그인 가능)')
+        setAuthMode('login')
+      } else {
+        // 로그인
+        const { error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        })
+
+        if (error) {
+          throw error
+        }
+
+        // 로그인 성공 시 리다이렉트
+        router.push('/question')
+      }
+    } catch (err) {
+      console.error(`Email ${authMode} error:`, err)
+      setError({
+        message: err instanceof Error ? err.message : `${authMode === 'signup' ? '회원가입' : '로그인'} 중 오류가 발생했습니다.`,
+      })
+    } finally {
+      setIsEmailLoading(false)
+    }
+  }
+
   const handleGuestBrowse = () => {
     router.push('/question')
   }
 
-  const isLoading = loadingProvider !== null
+  const isLoading = loadingProvider !== null || isEmailLoading
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-background to-primary-50/30 p-8">
@@ -126,6 +180,80 @@ function LoginPageContent() {
             {error.message}
           </div>
         )}
+
+        {/* 성공 메시지 */}
+        {successMessage && (
+          <div className="animate-slide-up border-2 border-success bg-success-light p-4 text-center font-pixel text-pixel-caption text-success-dark">
+            <span className="mr-2">✓</span>
+            {successMessage}
+          </div>
+        )}
+
+        {/* 이메일 로그인 폼 */}
+        <div className="space-y-4">
+          <form onSubmit={handleEmailAuth} className="space-y-3">
+            <div>
+              <input
+                type="email"
+                placeholder="이메일"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                disabled={isLoading}
+                className="w-full px-4 py-3 border-2 border-muted bg-background font-pixel text-pixel-body focus:border-primary-500 focus:outline-none disabled:opacity-50"
+              />
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder="비밀번호 (6자 이상)"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={6}
+                disabled={isLoading}
+                className="w-full px-4 py-3 border-2 border-muted bg-background font-pixel text-pixel-body focus:border-primary-500 focus:outline-none disabled:opacity-50"
+              />
+            </div>
+            <PixelButton
+              type="submit"
+              variant="primary"
+              size="lg"
+              disabled={isLoading}
+              isLoading={isEmailLoading}
+              className="w-full"
+            >
+              <EmailIcon className="mr-2 h-5 w-5" />
+              {authMode === 'signup' ? '회원가입' : '이메일로 로그인'}
+            </PixelButton>
+          </form>
+
+          {/* 모드 전환 */}
+          <button
+            type="button"
+            onClick={() => {
+              setAuthMode(authMode === 'login' ? 'signup' : 'login')
+              setError(null)
+              setSuccessMessage(null)
+            }}
+            disabled={isLoading}
+            className="w-full text-center font-pixel text-pixel-caption text-primary-500 hover:text-primary-600 underline underline-offset-2 disabled:opacity-50"
+          >
+            {authMode === 'login' ? '계정이 없으신가요? 회원가입' : '이미 계정이 있으신가요? 로그인'}
+          </button>
+        </div>
+
+        {/* 구분선 */}
+        <div className="relative py-2">
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full border-t border-muted" />
+          </div>
+          <div className="relative flex justify-center">
+            <span className="bg-gradient-to-b from-background to-primary-50/30 px-4 font-pixel text-pixel-caption text-muted-foreground">
+              또는 소셜 로그인
+            </span>
+          </div>
+        </div>
 
         {/* 소셜 로그인 버튼 */}
         <div className="space-y-3">
@@ -239,6 +367,24 @@ function GuestIcon({ className }: { className?: string }) {
     >
       <circle cx="12" cy="8" r="4" />
       <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+    </svg>
+  )
+}
+
+// 이메일 아이콘 컴포넌트
+function EmailIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
   )
 }
