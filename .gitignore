@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+.next/
+out/
+dist/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Testing
+coverage/
+
+# Vercel
+.vercel
+
+# Supabase
+supabase/.temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Tasks (프로젝트별 태스크는 추적 안함)
+.claude/tasks/_active/*
+.claude/tasks/_done/*
+!.claude/tasks/_active/.gitkeep
+!.claude/tasks/_done/.gitkeep
+!.claude/tasks/_backlog/.gitkeep
