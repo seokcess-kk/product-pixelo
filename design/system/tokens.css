@@ -1,0 +1,500 @@
+/**
+ * PIXELO Design Tokens
+ *
+ * "픽셀로 만나는 나의 세계"
+ *
+ * 레트로 픽셀 아트 + 현대적 감성의 디자인 시스템
+ */
+
+:root {
+  /* ========================================
+     COLORS
+     ======================================== */
+
+  /* Primary - Pixel Blue */
+  --color-primary-50: #F0F4FF;
+  --color-primary-100: #DFE7FF;
+  --color-primary-200: #C4D4FF;
+  --color-primary-300: #9BB5FF;
+  --color-primary-400: #6B8CFF;
+  --color-primary-500: #4D6FFF;
+  --color-primary-600: #3B54DB;
+  --color-primary-700: #2E41B8;
+  --color-primary-800: #243094;
+  --color-primary-900: #1C2570;
+
+  /* Neutral - Gray */
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+
+  /* Axis Colors - 7 Measurement Axes */
+
+  /* 1. Energy (에너지 방향) - Coral Red */
+  --color-energy-light: #FFE5E5;
+  --color-energy-main: #FF6B6B;
+  --color-energy-dark: #D63031;
+
+  /* 2. Lifestyle (생활 패턴) - Amber Orange */
+  --color-lifestyle-light: #FFF3E0;
+  --color-lifestyle-main: #FFB347;
+  --color-lifestyle-dark: #E67E22;
+
+  /* 3. Emotion (감성 스타일) - Rose Pink */
+  --color-emotion-light: #FFF0F5;
+  --color-emotion-main: #FF85A2;
+  --color-emotion-dark: #E84393;
+
+  /* 4. Aesthetic (미적 취향) - Mint Green */
+  --color-aesthetic-light: #E8FFF5;
+  --color-aesthetic-main: #55EFC4;
+  --color-aesthetic-dark: #00B894;
+
+  /* 5. Social (사회적 성향) - Sky Cyan */
+  --color-social-light: #E8F8FF;
+  --color-social-main: #74B9FF;
+  --color-social-dark: #0984E3;
+
+  /* 6. Challenge (도전 성향) - Electric Purple */
+  --color-challenge-light: #F3E8FF;
+  --color-challenge-main: #A855F7;
+  --color-challenge-dark: #7C3AED;
+
+  /* 7. Relationship (관계 방식) - Warm Yellow */
+  --color-relation-light: #FFFDE8;
+  --color-relation-main: #FDCB6E;
+  --color-relation-dark: #F39C12;
+
+  /* Semantic Colors */
+  --color-success-light: #E8F5E9;
+  --color-success-main: #4CAF50;
+  --color-success-dark: #2E7D32;
+
+  --color-warning-light: #FFF8E1;
+  --color-warning-main: #FF9800;
+  --color-warning-dark: #E65100;
+
+  --color-error-light: #FFEBEE;
+  --color-error-main: #F44336;
+  --color-error-dark: #C62828;
+
+  --color-info-light: #E3F2FD;
+  --color-info-main: #2196F3;
+  --color-info-dark: #1565C0;
+
+  /* Pixel Special Colors */
+  --color-pixel-black: #1A1A2E;
+  --color-pixel-white: #FFFEF0;
+  --color-pixel-gold: #FFD93D;
+  --color-pixel-silver: #C0C0C0;
+  --color-pixel-heart: #FF4757;
+  --color-pixel-star: #FFC312;
+  --color-pixel-exp: #6C5CE7;
+  --color-pixel-level: #00D2D3;
+
+  /* Seasonal Colors - Spring */
+  --color-spring-primary: #FFB7C5;
+  --color-spring-secondary: #98D8AA;
+  --color-spring-accent: #FFFACD;
+
+  /* Seasonal Colors - Summer */
+  --color-summer-primary: #00CED1;
+  --color-summer-secondary: #FFD700;
+  --color-summer-accent: #FF6347;
+
+  /* Seasonal Colors - Autumn */
+  --color-autumn-primary: #D2691E;
+  --color-autumn-secondary: #8B4513;
+  --color-autumn-accent: #DAA520;
+
+  /* Seasonal Colors - Winter */
+  --color-winter-primary: #87CEEB;
+  --color-winter-secondary: #FFFFFF;
+  --color-winter-accent: #DC143C;
+
+  /* Text Colors */
+  --color-text-primary: #212121;
+  --color-text-secondary: #616161;
+  --color-text-tertiary: #9E9E9E;
+  --color-text-disabled: #BDBDBD;
+  --color-text-inverse: #FFFFFF;
+  --color-text-link: #4D6FFF;
+  --color-text-link-hover: #3B54DB;
+
+  /* ========================================
+     TYPOGRAPHY
+     ======================================== */
+
+  /* Font Families */
+  --font-pixel: 'DungGeunMo', 'Press Start 2P', monospace;
+  --font-sans: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes - Pixel */
+  --text-pixel-hero: 48px;
+  --text-pixel-title: 32px;
+  --text-pixel-heading: 24px;
+  --text-pixel-subhead: 20px;
+  --text-pixel-body: 16px;
+  --text-pixel-caption: 12px;
+
+  /* Font Sizes - Modern */
+  --text-display-lg: 48px;
+  --text-display-md: 36px;
+  --text-display-sm: 30px;
+  --text-heading-lg: 24px;
+  --text-heading-md: 20px;
+  --text-heading-sm: 18px;
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-body-sm: 14px;
+  --text-caption: 12px;
+  --text-tiny: 10px;
+
+  /* Font Sizes - Numbers */
+  --text-number-hero: 64px;
+  --text-number-lg: 48px;
+  --text-number-md: 32px;
+  --text-number-sm: 24px;
+  --text-number-caption: 16px;
+
+  /* Line Heights */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.2;
+  --leading-normal: 1.4;
+  --leading-relaxed: 1.6;
+  --leading-loose: 1.8;
+
+  /* Font Weights */
+  --font-thin: 100;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ========================================
+     SPACING
+     ======================================== */
+
+  /* Base Unit */
+  --space-unit: 8px;
+
+  /* Spacing Scale */
+  --space-0: 0;
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-1-5: 12px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Pixel Grid Spacing */
+  --space-pixel-1: 8px;
+  --space-pixel-2: 16px;
+  --space-pixel-4: 32px;
+  --space-pixel-8: 64px;
+
+  /* Component Spacing */
+  --space-button-xs: 4px 8px;
+  --space-button-sm: 8px 12px;
+  --space-button-md: 8px 16px;
+  --space-button-lg: 12px 24px;
+  --space-button-xl: 16px 32px;
+
+  --space-input-sm: 8px 12px;
+  --space-input-md: 12px 16px;
+  --space-input-lg: 16px 20px;
+
+  --space-card-compact: 16px;
+  --space-card-default: 24px;
+  --space-card-spacious: 32px;
+
+  --space-modal-mobile: 24px;
+  --space-modal-desktop: 32px;
+
+  /* Layout Spacing */
+  --space-header-height: 64px;
+  --space-page-padding-x: 16px;
+  --space-page-padding-top: 48px;
+  --space-page-padding-bottom: 96px;
+  --space-section-gap: 64px;
+  --space-subsection-gap: 40px;
+
+  /* Container */
+  --container-sm: 720px;
+  --container-md: 960px;
+  --container-lg: 1200px;
+
+  /* ========================================
+     BORDERS & RADIUS
+     ======================================== */
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* Border Width */
+  --border-0: 0;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-3: 3px;
+  --border-4: 4px;
+  --border-pixel: 4px;
+
+  /* ========================================
+     SHADOWS
+     ======================================== */
+
+  /* Modern Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+  /* Card Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Modal Shadow */
+  --shadow-modal: 0 24px 48px rgba(0, 0, 0, 0.2);
+
+  /* Pixel Shadows */
+  --shadow-pixel: 4px 4px 0 var(--color-gray-900);
+  --shadow-pixel-sm: 2px 2px 0 var(--color-gray-900);
+  --shadow-pixel-pressed: 2px 2px 0 var(--color-gray-900);
+
+  /* ========================================
+     TRANSITIONS & ANIMATIONS
+     ======================================== */
+
+  /* Durations */
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-normal: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --duration-pixel: 150ms;
+
+  /* Easing */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Common Transitions */
+  --transition-colors: color var(--duration-fast) var(--ease-in-out),
+                       background-color var(--duration-fast) var(--ease-in-out),
+                       border-color var(--duration-fast) var(--ease-in-out);
+  --transition-transform: transform var(--duration-normal) var(--ease-out);
+  --transition-opacity: opacity var(--duration-normal) var(--ease-in-out);
+  --transition-shadow: box-shadow var(--duration-normal) var(--ease-out);
+  --transition-all: all var(--duration-normal) var(--ease-in-out);
+
+  /* ========================================
+     Z-INDEX
+     ======================================== */
+
+  --z-base: 0;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-fixed: 30;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-toast: 70;
+  --z-max: 100;
+
+  /* ========================================
+     COMPONENT SPECIFIC
+     ======================================== */
+
+  /* Button Heights */
+  --height-button-xs: 24px;
+  --height-button-sm: 32px;
+  --height-button-md: 40px;
+  --height-button-lg: 48px;
+  --height-button-xl: 56px;
+
+  /* Input Heights */
+  --height-input-sm: 40px;
+  --height-input-md: 48px;
+  --height-input-lg: 56px;
+
+  /* Avatar Sizes */
+  --size-avatar-xs: 24px;
+  --size-avatar-sm: 32px;
+  --size-avatar-md: 48px;
+  --size-avatar-lg: 64px;
+  --size-avatar-xl: 96px;
+
+  /* Pixel Character Sizes */
+  --size-pixel-sm: 32px;
+  --size-pixel-md: 64px;
+  --size-pixel-lg: 128px;
+
+  /* Icon Sizes */
+  --size-icon-xs: 14px;
+  --size-icon-sm: 16px;
+  --size-icon-md: 20px;
+  --size-icon-lg: 24px;
+  --size-icon-xl: 32px;
+}
+
+/* ========================================
+   DARK MODE
+   ======================================== */
+
+[data-theme="dark"],
+.dark {
+  /* Background */
+  --color-gray-50: #1A1A2E;
+  --color-gray-100: #232342;
+  --color-gray-200: #2D2D52;
+  --color-gray-300: #3D3D62;
+  --color-gray-400: #5D5D82;
+  --color-gray-500: #8D8DA2;
+  --color-gray-600: #ADADC2;
+  --color-gray-700: #CDCDE2;
+  --color-gray-800: #E5E5F5;
+  --color-gray-900: #F5F5FF;
+
+  /* Primary (brighter in dark mode) */
+  --color-primary-500: #6B8CFF;
+  --color-primary-600: #4D6FFF;
+
+  /* Text */
+  --color-text-primary: #F5F5F5;
+  --color-text-secondary: #BDBDBD;
+  --color-text-tertiary: #757575;
+  --color-text-disabled: #4D4D4D;
+
+  /* Axis Colors (brighter in dark mode) */
+  --color-energy-main: #FF8A8A;
+  --color-lifestyle-main: #FFCC7D;
+  --color-emotion-main: #FFA5B8;
+  --color-aesthetic-main: #7FFFD4;
+  --color-social-main: #99CCFF;
+  --color-challenge-main: #C084FC;
+  --color-relation-main: #FFE066;
+
+  /* Shadows (subtler in dark mode) */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-pixel: 4px 4px 0 #000000;
+}
+
+/* ========================================
+   RESPONSIVE OVERRIDES
+   ======================================== */
+
+@media (max-width: 768px) {
+  :root {
+    /* Adjust spacing for mobile */
+    --space-page-padding-x: 16px;
+    --space-page-padding-top: 32px;
+    --space-page-padding-bottom: 64px;
+    --space-section-gap: 48px;
+    --space-modal-padding: 24px;
+
+    /* Adjust typography for mobile */
+    --text-pixel-hero: 32px;
+    --text-pixel-title: 24px;
+    --text-display-lg: 32px;
+    --text-display-md: 28px;
+    --text-number-hero: 48px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    /* Tablet adjustments */
+    --space-page-padding-x: 24px;
+    --text-pixel-hero: 40px;
+    --text-display-lg: 40px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+    --duration-slow: 0ms;
+    --duration-slower: 0ms;
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES (Optional)
+   ======================================== */
+
+/* Pixel rendering for crisp pixel art */
+.pixel-render {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+/* Pixel font class */
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+/* Pixel border style */
+.border-pixel {
+  border: var(--border-pixel) solid var(--color-pixel-black);
+}
+
+/* Pixel shadow */
+.shadow-pixel {
+  box-shadow: var(--shadow-pixel);
+}
+
+/* Pixel button 3D effect */
+.btn-pixel-3d {
+  box-shadow:
+    inset -4px -4px 0 var(--color-primary-700),
+    inset 4px 4px 0 var(--color-primary-300);
+}
+
+.btn-pixel-3d:active {
+  box-shadow:
+    inset 4px 4px 0 var(--color-primary-700),
+    inset -4px -4px 0 var(--color-primary-300);
+  transform: translate(2px, 2px);
+}
